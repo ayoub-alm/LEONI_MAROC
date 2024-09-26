@@ -95,6 +95,7 @@ export class PackagingScanComponent implements OnInit, AfterViewInit {
       tap(value =>{
         if(value === this.storageService.getItem('current_box_prefix') + this.packagingBox.getValue().barcode){
           this.stepper.reset()
+          window.location.reload();
         }else{
           this.snackBar.open("value not correct", "OK",{duration:3000})
         }
